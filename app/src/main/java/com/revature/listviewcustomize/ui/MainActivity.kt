@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.toArgb
 import com.revature.listviewcustomize.model.plants
 import com.revature.listviewcustomize.ui.theme.ListViewCustomizeTheme
 
@@ -16,6 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ListViewCustomizeTheme {
+                window.statusBarColor = MaterialTheme.colors.primaryVariant.toArgb()
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),

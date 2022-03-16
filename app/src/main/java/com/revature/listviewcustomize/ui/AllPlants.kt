@@ -1,5 +1,7 @@
 package com.revature.listviewcustomize.ui
 
+import android.content.res.Configuration.UI_MODE_NIGHT_NO
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -11,9 +13,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.revature.listviewcustomize.R
 import com.revature.listviewcustomize.model.data.Plant
+import com.revature.listviewcustomize.model.plants
+import com.revature.listviewcustomize.ui.theme.ListViewCustomizeTheme
+
+@Preview(
+    uiMode = UI_MODE_NIGHT_YES
+)
+@Preview(
+    uiMode = UI_MODE_NIGHT_NO
+)
+
+@Composable
+fun DefaultPreview() {
+    ListViewCustomizeTheme {
+        AllPlants(plants)
+    }
+}
 
 @Composable
 fun AllPlants(plantList:List<Plant>) {

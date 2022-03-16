@@ -1,30 +1,30 @@
 package com.revature.listviewcustomize.ui.theme
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import com.revature.listviewcustomize.R
 
+@SuppressLint("ConflictingOnColor")
 private val DarkColorPalette = darkColors(
-    primary = teal700,
-    primaryVariant = tealDark,
-    secondary = redDark,
+    primary = pink,
+    primaryVariant = purple,
+    secondary = pink,
     background = Color.DarkGray,
     surface = Color.DarkGray,
     onPrimary = Color.White,
 )
 
 private val LightColorPalette = lightColors(
-    primary = teal700,
-    primaryVariant = tealDark,
+    primary = pink,
+    primaryVariant = purple,
     secondary = red100,
-    onPrimary = Color.White,
+    background = Color.White,
+    surface = Color.White,
+    onPrimary = Color.Black,
 )
 
 @Composable

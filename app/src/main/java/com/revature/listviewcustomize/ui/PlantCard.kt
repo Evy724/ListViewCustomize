@@ -29,7 +29,7 @@ fun PlantCard(name:String, description:String, image:Int) {
             .padding(10.dp)
             .fillMaxWidth()
             .wrapContentHeight()
-            .clickable { cardViewCallBack(context, name+description) },
+            .clickable { cardViewCallBack(context, name + description) },
         shape = MaterialTheme.shapes.medium,
         elevation = 5.dp,
         backgroundColor = MaterialTheme.colors.surface
@@ -57,7 +57,7 @@ fun PlantCard(name:String, description:String, image:Int) {
                 Text(
                     text = name,
                     style = MaterialTheme.typography.h2,
-                    color = MaterialTheme.colors.onSurface,
+                    color = MaterialTheme.colors.secondary,
                     modifier = Modifier
                         .padding(bottom = 8.dp)
                         .fillMaxWidth()
@@ -65,6 +65,7 @@ fun PlantCard(name:String, description:String, image:Int) {
                 Text(
                     text = description,
                     style = MaterialTheme.typography.body2,
+                    color = MaterialTheme.colors.primary,
                     modifier = Modifier.padding(bottom = 4.dp)
                 )
 
